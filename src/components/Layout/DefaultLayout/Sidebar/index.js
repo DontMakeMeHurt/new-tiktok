@@ -1,8 +1,13 @@
+import classNames from 'classnames/bind';
+import styles from './Sidebar.module.scss';
+
+const cx = classNames.bind(styles);
+
 function SideBar() {
     return (
-        <div>
+        <aside className={cx('wrapper')}>
             <h2>SideBar</h2>
-        </div>
+        </aside>
     );
 }
 
