@@ -1,4 +1,7 @@
 import classNames from 'classnames/bind';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleXmark, faMagnifyingGlass, faSpinner } from '@fortawesome/free-solid-svg-icons';
+
 import styles from './Header.module.scss';
 import images from '~/assets/images';
 
@@ -12,11 +15,16 @@ function Header() {
                     <img src={images.logo} alt="logo" />
                 </div>
                 <div className={cx('search')}>
-                    <input placeholder="Search accounts and video" spellCheck="false" />
-                    <button>{/* icon close */}</button>
-                    {/* loading */}
-                    <div className={cx('search-btn')}>{/* icon search */}</div>
+                    <input placeholder="Tìm kiếm tài khoản và video" spellCheck="false" />
+                    <button className={cx('clear')}>
+                        <FontAwesomeIcon icon={faCircleXmark} />
+                    </button>
+                    <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />
+                    <button className={cx('search-btn')}>
+                        <FontAwesomeIcon icon={faMagnifyingGlass} />
+                    </button>
                 </div>
+                <div className={cx('action')}></div>
             </div>
         </header>
     );
