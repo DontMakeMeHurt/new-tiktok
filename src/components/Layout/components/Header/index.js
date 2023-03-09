@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark, faMagnifyingGlass, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { faCircleXmark, faMagnifyingGlass, faSignIn, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react/headless';
 
 import Button from '../../../Button/index';
@@ -56,7 +56,9 @@ function Header() {
                     </div>
                 </Tippy>
                 <div className={cx('actions')}>
-                    <Button primary href='https://fullstack.edu.vn' target="_blank">Log In</Button>
+                    <Button text>Upload</Button>
+                    <Button primary>Log In</Button>
+
                 </div>
             </div>
         </header>
