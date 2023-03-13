@@ -28,6 +28,12 @@
   margin-left: 8px;
 }
 
+.icon {
+  display: inline-block;
+  width: 18px;
+  text-align: center;
+}
+
 .rounded {
   border-radius: 999px;
   box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
@@ -43,9 +49,22 @@
   background-color: var(--primary);
   border-color: var(--primary);
   color: var(--white);
+  padding: 0 12px;
 
   &:hover {
    background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)),#FE2C55;
+  }
+}
+
+.forItem {
+  margin-left: 0 !important;
+  width: 100%;
+  justify-content: flex-start;
+  border-radius: 0px;
+  height: 42px;
+
+  &:hover {
+    background-color: rgba(22, 24, 35, 0.03) !important;
   }
 }
 

@@ -16,6 +16,7 @@ function Button({
                     rounded = false,
                     leftIcon = false,
                     rightIcon = false,
+                    forItem = false,
                     children,
                     onClick,
                     ...passProps
@@ -27,7 +28,7 @@ function Button({
         ...passProps,
     };
 
-    if(disabled) {
+    if (disabled) {
         delete props.onClick;
     }
 
@@ -41,12 +42,13 @@ function Button({
 
     const classes = cx('wrapper', {
         primary,
+        forItem,
         text,
         outline,
         small,
         large,
         disabled,
-        rounded
+        rounded,
     });
     return (
         <Comp className={classes} {...props}>
