@@ -80,9 +80,7 @@ function Header() {
                 <Button text>Tải Lên</Button>
                 <Button primary>Đăng Nhập</Button>
 
-                <Menu
-                    items={MENU_ITEMS}
-                >
+                <Menu items={MENU_ITEMS}>
                     <button className={cx('more-btn')}>
                         <FontAwesomeIcon icon={faEllipsisVertical} />
                     </button>
