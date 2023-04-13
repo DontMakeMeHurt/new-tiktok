@@ -28,7 +28,6 @@ const MENU_ITEMS = [
     {
         icon: <FontAwesomeIcon icon={faCircleQuestion} />,
         title: 'Hỗ trợ và phản hồi',
-        to: '/feedback',
     },
     {
         icon: <FontAwesomeIcon icon={faKeyboard} />,

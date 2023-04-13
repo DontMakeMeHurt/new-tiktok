@@ -1,6 +1,8 @@
 // Menu wrapper
 .menu-list {
     width: 224px;
+    min-height: 80px;
+    padding: 8px 0 8px;
 
     .menu-item {
         margin-left: 0;
@@ -13,13 +15,17 @@
 
 // Menu items
 .menu-item {
+    padding: 10px 8px 10px 16px;
     background-color: #fff;
     width: 100%;
-    height: 44px;
+    min-height:44px;
     text-align: left;
     border-radius: 0;
-    padding: 11px 16px;
     color: #161823;
     font-size: 16px;
     font-weight: 600;
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
 }
