@@ -101,10 +101,52 @@ input:not(:placeholder-shown) ~ .search-btn {
     }
 }
 
+//Actions
+
+.actions {
+    display:flex;
+    align-items: center;
+}
+
+
 .more-btn {
     font-size: 2rem;
     margin-left: 28px;
     background-color: transparent;
     padding: 4px 8px;
     cursor: pointer;
+}
+
+.action-btn {
+    color: #161823;
+    font-size: 2.4rem;
+    background-color: transparent;
+    padding: 4px 12px;
+    cursor: pointer;
+}
+
+//Custom tippy tooltip
+
+body {
+    .tippy-box {
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        background-color: rgba(84,84,84,0.92);
+    }
+
+    .tippy-arrow {
+        color: rgba(84,84,84,0.92);
+    }
+
+    .tippy-content {
+        padding: 8px 9px;
+    }
+
+    .tippy-box[data-placement^=bottom]>.tippy-arrow:before {
+        top: -8px;
+    }
+
+
 }
