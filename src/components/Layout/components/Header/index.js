@@ -2,12 +2,13 @@ import { useEffect, useState } from 'react';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
+    faBookmark,
     faCircleQuestion,
     faCircleXmark, faCloudUpload, faEarthAsia,
-    faEllipsisVertical, faKeyboard,
+    faEllipsisVertical, faGear, faKeyboard,
     faMagnifyingGlass,
     faSignIn,
-    faSpinner,
+    faSpinner, faUser,
 } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react';
 import HeadlessTippy from '@tippyjs/react/headless';
@@ -20,6 +21,7 @@ import images from '~/assets/images';
 import AccountsItem from '../AccountsItem';
 import Menu from '../../../Popper/Menu';
 import menu from '../../../Popper/Menu';
+import { faTiktok } from '@fortawesome/free-brands-svg-icons';
 
 const cx = classNames.bind(styles);
 
@@ -64,6 +66,8 @@ function Header() {
 
     const [searchResult, setSearchResult] = useState([]);
 
+    const currentUser = true;
+
     useEffect(() => {
         setTimeout(() => {
             setSearchResult([]);
@@ -76,7 +80,25 @@ function Header() {
         console.log(menuItem);
     };
 
-    const currentUser = true;
+    const UserMenu = [
+        {
+            icon: <FontAwesomeIcon icon={faUser} />,
+            title: 'Xem hồ sơ ',
+        },
+        {
+            icon: <FontAwesomeIcon icon={faTiktok} />,
+            title: 'Nhận xu',
+        },
+        {
+            icon: <FontAwesomeIcon icon={faBookmark} />,
+            title: 'Yêu thích',
+        },
+        {
+            icon: <FontAwesomeIcon icon={faGear} />,
+            title: 'Cài đặt',
+        },
+        ...MENU_ITEMS
+    ]
 
     return (<header className={cx('wrapper')}>
         <div className={cx('inner')}>
@@ -125,7 +147,7 @@ function Header() {
                         <Button primary className={cx('login')} >Đăng Nhập</Button>
                     </>
                 )}
-                <Menu items={MENU_ITEMS} onChange={handleOnChange}>
+                <Menu items={currentUser ? UserMenu : MENU_ITEMS} onChange={handleOnChange}>
                     {currentUser ? (
                         <img className={cx('user-avatar')} src='https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/86fd7660037e6587340b4cc919516bb5~c5_100x100.jpeg?x-expires=1681912800&x-signature=zZMxam7%2F7y6Qe8242rESGcynMfU%3D' alt='' />
                     ) : (

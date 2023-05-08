@@ -117,6 +117,15 @@ input:not(:placeholder-shown) ~ .search-btn {
     cursor: pointer;
 }
 
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 12px;
+    cursor: pointer;
+}
+
 .action-btn {
     color: #161823;
     font-size: 2.4rem;
@@ -147,6 +156,5 @@ body {
     .tippy-box[data-placement^=bottom]>.tippy-arrow:before {
         top: -8px;
     }
-
 
 }
