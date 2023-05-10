@@ -7,7 +7,7 @@ import {
     faCircleXmark, faCloudUpload, faEarthAsia,
     faEllipsisVertical, faGear, faKeyboard,
     faMagnifyingGlass,
-    faSignIn,
+    faSignIn, faSignOut,
     faSpinner, faUser,
 } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react';
@@ -97,7 +97,12 @@ function Header() {
             icon: <FontAwesomeIcon icon={faGear} />,
             title: 'Cài đặt',
         },
-        ...MENU_ITEMS
+        ...MENU_ITEMS,
+        {
+            icon: <FontAwesomeIcon icon={faSignOut} />,
+            title: 'Đăng Xuất',
+            separate: true,
+        },
     ]
 
     return (<header className={cx('wrapper')}>

@@ -25,6 +25,10 @@
     font-size: 16px;
     font-weight: 600;
 
+    &.separate {
+        border-top: 1px solid rgba(22,24,35,0.12);
+    }
+
     &:hover {
         cursor: pointer;
         background-color: rgba(22, 24, 35, 0.03);
